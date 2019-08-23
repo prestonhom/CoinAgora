@@ -1,9 +1,12 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema; 
 
-var 
 
-var userSchema = new mongoose.Schema({
+var userSchema = new Schema({
     name: String,
+    email: String,
+    avatar: String,
+    googleId:String,
     bitcoinBalance: {
         type: Number,
         default: 10
