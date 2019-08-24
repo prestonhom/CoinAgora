@@ -14,8 +14,10 @@ var userSchema = new Schema({
     ethereumBalance: {
         type: Number,
         default: 20
-    },
-        timestamps:true
-    });
+    }
+},{
+    timestamps:true
+})
+    
 
 module.exports = mongoose.model('User', userSchema)

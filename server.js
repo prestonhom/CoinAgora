@@ -29,7 +29,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use(session({
-  secet:'CoinAgora',
+  secret:'CoinAgora',
   resave: false,
   saveUninitialized: true
 }))
