@@ -6,3 +6,23 @@ body {
 a {
   color: #00B7FF;
 }
+
+nav{
+  display:flex;
+  align-items:center;
+  justify-content: flex-end;
+  background-color: black;
+}
+
+nav .logo{
+  object-fit: contain;
+  margin-right:auto;
+}
+
+main{
+  display:flex;
+  background:red;
+  align-items:center; 
+  
+  flex-direction: column;
+}

@@ -12,4 +12,5 @@ function index(req,res){
             user: req.user
         })
     })
+    
 }
