@@ -25,5 +25,5 @@ router.get('/logout', function(req,res){
   res.redirect('/');
 })
 
-router.get('/', indexController.index);
+
 module.exports = router;
