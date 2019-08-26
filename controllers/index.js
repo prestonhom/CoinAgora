@@ -8,7 +8,7 @@ module.exports= {
 
 function index(req,res){
     Account.find({}, function(err,users){
-        res.render('account/index', {
+        res.render('index', {
             title: 'Coin Agora',
             users,
             user: req.user
@@ -17,7 +17,11 @@ function index(req,res){
 }
 
 function order(req,res){
+    Account.find({}, function(err,users){
     res.render('orders/index',{
-        title: 'Coin Agora'
+        title: 'Coin Agora',
+        users,
+        user: req.user
+        })
     })
 }

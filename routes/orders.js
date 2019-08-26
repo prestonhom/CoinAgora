@@ -5,4 +5,5 @@ var orderController = require('../controllers/index');
 
 
 router.get('/', orderController.order)
+
 module.exports = router;

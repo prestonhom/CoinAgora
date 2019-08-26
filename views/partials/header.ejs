@@ -13,6 +13,15 @@
     <a href="/orders" <%- title === '' ? 'class="active"' : '' %>>All Orders</a>
     <a href="/transactions/trade" <%- title === '' ? 'class="active"' : '' %>>Trade</a>
     <a href="/account" <%- title === '' ? 'class="active"' : '' %>>My Account</a>
+    <ul class="right">
+            <li>
+            <% if (user) { %>
+              <a href="/logout">Log Out</a>
+            <% } else { %>
+              <a href="/auth/google">Login with Google</a>
+            <% } %>
+            </li>
+        </ul>
 
         
     
