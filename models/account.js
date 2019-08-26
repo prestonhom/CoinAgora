@@ -7,13 +7,13 @@ var accountSchema = new Schema({
     email: String,
     avatar: String,
     googleId:String,
-    bitcoinBalance: {
-        type: Number,
+    btc:{
+        type:Number,
         default: 10
     },
-    ethereumBalance: {
-        type: Number,
-        default: 20
+    eth:{
+        type:Number,
+        default: 100
     }
 },{
     timestamps:true

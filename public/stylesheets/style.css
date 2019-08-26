@@ -12,8 +12,12 @@ nav{
   align-items:center;
   justify-content: flex-end;
   background-color: black;
+  padding:20px;
 }
 
+nav a{
+  padding:2em;
+}
 nav .logo{
   object-fit: contain;
   margin-right:auto;
