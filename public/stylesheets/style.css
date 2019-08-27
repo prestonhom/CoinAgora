@@ -19,16 +19,17 @@ margin:0px;
   background-color:white;
 }
 
-#trade-container{
-  margin:0px;
-  background-color:white;
-}
+
 .coin-agora-welcome{
   font-family: Montserrat;
   color:white;
   font-size:72px;
   font-weight: 100;
   text-align: center;
+  background:linear-gradient(to bottom, white, transparent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
 }
 #landing-page-container{
   display:flex;
@@ -186,8 +187,8 @@ h1.my-account{
 
 .ethereum-balance{
   display:flex;
-  font-size:20px;
-  margin-right:100px;
+  font-size:36px;
+  margin-right:150px;
 }
 
 .numerical-balances{
@@ -197,11 +198,12 @@ h1.my-account{
   font-size:50px;
 }
 .numerical-bitcoin-balance{
-  margin-right:200px;
+  margin-left:-180px;
 }
 
 .numerical-ethereum-balance{
-  margin-left:200px;
+  margin-left:100px;
+  
 }
 
 .transaction-history{
@@ -212,13 +214,29 @@ h1.my-account{
 
 
 /* end of account page */
+/* trade page */
+#trade-container{
+  margin:0px;
+  background-color:white;
+  font-family: Montserrat;
+}
+
 #trade-forms{
   display:flex;
   justify-content: space-evenly;
+  border-top:1px solid black;
+  border-bottom:1px solid  black;
+  width:70%;
+  margin-left:10em;
 }
+
 
 #bid, #ask {
   padding: 0 10em;
+}
+input{
+  border-radius:10px;
+  margin-bottom:15px;
 }
 input[type=text]{
   padding: 15px;
@@ -226,3 +244,22 @@ input[type=text]{
 input[type=number]{
   padding:15px;
 }
+
+h1.trade-header{
+  margin-left:5em;
+}
+
+.trade-page-submit{
+  background-color: rgb(0,115,210);
+  color:white;
+  margin-top:30px;
+  margin-left: 60em;
+  font-size:10px;
+  border-radius:15px;
+  padding:10px 50px;
+}
+.trade-page-submit:hover{
+  cursor: pointer;
+}
+
+/* end of trade page */
