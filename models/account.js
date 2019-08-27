@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 
 var accountSchema = new Schema({
     name: String,
+    username: String,
     email: String,
     avatar: String,
     googleId:String,
@@ -14,7 +15,7 @@ var accountSchema = new Schema({
     eth:{
         type:Number,
         default: 100
-    }
+    },
 },{
     timestamps:true
 })

@@ -1,20 +1,17 @@
 <%- include('partials/header'); %>
-    
-    <h1>Coin Agora</h1>
-    <p>Welcome to Coin Agora</p>
-    <button><a href=""> New User? Sign up! </a></button>
-    <button><a href="">Existing User: Log in</a></button>
-
-    <ul class="right">
-        <li>
-        <% if (user) { %>
-          <a href="/logout">Log Out</a>
-        <% } else { %>
-          <a href="/auth/google">Login with Google</a>
-        <% } %>
-        </li>
-    </ul>
-  </body>
-</html>
+<div id='sign-up-container'>
+  <p class='left-paragraph'>A peer-to-peer cryptocurrency trading marketplace </p>
+    <img class='bitcoin-image'src="images/bitcoin.svg" alt="bitcoin image">
+        <div class='homepage-buttons'>
+          <button class='sign-up'><a href="/auth/google"> Sign Up with  
+          </a>
+          <a href="/auth/google"> 
+          <img class="google-logo" src="images/google.png" alt="google pic">
+          </a>
+          </button>
+        </div>
+    <img class='ethereum-image'src="images/ethereum.svg" alt="ethereum image">
+  <p class='right-paragraph'>Linking buyers and sellers directly select from posted orders or post your own. </p>
+</div>
 
 <%- include('partials/footer'); %>

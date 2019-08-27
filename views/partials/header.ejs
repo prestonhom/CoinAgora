@@ -5,23 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
   <title><%= title %></title>
 </head>
 <body>
   <nav>
-    <img class='logo' src="">
+    <img class='logo' src="images/logo.svg">
     <a href="/orders" <%- title === '' ? 'class="active"' : '' %>>All Orders</a>
-    <a href="/transactions/trade" <%- title === '' ? 'class="active"' : '' %>>Trade</a>
+    <a href="/trade" <%- title === '' ? 'class="active"' : '' %>>Trade</a>
     <a href="/account" <%- title === '' ? 'class="active"' : '' %>>My Account</a>
-    <ul class="right">
-            <li>
+    <div>
             <% if (user) { %>
               <a href="/logout">Log Out</a>
             <% } else { %>
-              <a href="/auth/google">Login with Google</a>
+              <a href="/auth/google">Login</a>
             <% } %>
-            </li>
-        </ul>
+    </div>
+           
 
         
     

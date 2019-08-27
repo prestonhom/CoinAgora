@@ -1,10 +1,12 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema; 
 
+
 var bidSchema = new Schema({
     
     amount:{
-        type: Number
+        type: Number,
+        min:0
     },
     coin:{
         enum:['BTC', 'ETH']
@@ -17,7 +19,8 @@ var bidSchema = new Schema({
 
 var askSchema = new Schema({
     amount:{
-        type: Number
+        type: Number,
+        min:0
     },
     coin:{
         enum:['BTC', 'ETH']
@@ -29,8 +32,10 @@ var askSchema = new Schema({
 })
 var orderSchema = new Schema({
     type:{
-        enum:['OPEN']
+        enum:['OPEN','FILLED']
     },
     bid: [bidSchema],
     ask: [askSchema]
 })
+
+module.exports = mongoose.model('Order', orderSchema)
