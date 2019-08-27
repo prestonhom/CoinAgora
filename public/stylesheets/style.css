@@ -1,16 +1,34 @@
-body {
+#index-container {
   /* position: absolute; */
 width: 100%;
 height: 100%;
 left: 0px;
 top: 0px;
 background: linear-gradient(180deg, #363F49 0%, #222326 80%);
+margin:0px;
+}
+
+#orders-container{
+  margin: 0px;
+  background-color:red;
+}
+
+
+#account-container{
+  margin:0px;
+  background-color:white;
+}
+
+#trade-container{
+  margin:0px;
+  background-color:white;
 }
 .coin-agora-welcome{
   font-family: Montserrat;
   color:white;
   font-size:72px;
   font-weight: 100;
+  text-align: center;
 }
 #landing-page-container{
   display:flex;
@@ -95,6 +113,7 @@ nav{
   /* background-color: black; */
   padding:20px;
   background:black;
+  
 }
 
 
@@ -114,27 +133,6 @@ nav .logo{
   width: 50px;
 }
 
-main{
-  display:flex;
-  /* background:red; */
-  align-items:center; 
-  flex-direction: column;
-}
-
-#trade-forms{
-  display:flex;
-  justify-content: space-evenly;
-}
-
-#bid, #ask {
-  padding: 0 10em;
-}
-input[type=text]{
-  padding: 15px;
-}
-input[type=number]{
-  padding:15px;
-}
 img.top-arrow{
   width:400px;
   height:100px;
@@ -148,10 +146,83 @@ img.bottom-arrow{
   padding: 3em;
   /* align-items:center;
   flex-direction: column; */
-
+  
 }
 
 
 p.left-paragraph{
   margin-left:50px;
+}
+
+/* account page styles */
+#account-container{
+  margin:0px;
+  font-family:Montserrat;
+}
+
+h1.my-account{
+  margin-left:5em;
+}
+.accounts{
+  border:1px solid black; 
+  border-left: 0;
+  border-right: 0;
+  width:70%;
+  margin-left:10em;
+}
+.account-balance{
+  display:flex;
+  align-items:center;
+  justify-content: space-evenly;
+ 
+}
+
+.bitcoin-balance{
+  display:flex;
+  font-size:36px;
+  margin-right:200px;
+  
+}
+
+.ethereum-balance{
+  display:flex;
+  font-size:20px;
+  margin-right:100px;
+}
+
+.numerical-balances{
+  display:flex;
+  align-items:center;
+  justify-content: space-evenly;
+  font-size:50px;
+}
+.numerical-bitcoin-balance{
+  margin-right:200px;
+}
+
+.numerical-ethereum-balance{
+  margin-left:200px;
+}
+
+.transaction-history{
+  margin-left:6.5em;
+  border-bottom:1px solid black;
+  width:70.5%;
+}
+
+
+/* end of account page */
+#trade-forms{
+  display:flex;
+  justify-content: space-evenly;
+}
+
+#bid, #ask {
+  padding: 0 10em;
+}
+input[type=text]{
+  padding: 15px;
+}
+input[type=number]{
+  padding:15px;
 }
