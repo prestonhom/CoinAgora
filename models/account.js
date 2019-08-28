@@ -16,7 +16,11 @@ var accountSchema = new Schema({
         type:Number,
         default: 100
     },
-},{
+    orders:[{
+        type: Schema.Types.ObjectId,
+        ref: 'Order'
+     }]
+    },{
     timestamps:true
 })
     

@@ -42,7 +42,7 @@ app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/account', accountRouter);
+app.use('/', accountRouter);
 app.use('/', orderRouter);
 app.use('/', tradeRouter);
 

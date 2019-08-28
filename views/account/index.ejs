@@ -6,20 +6,22 @@
       <div class='account-balance'>
         <!-- <div class='bitcoin-balance-container'> -->
           <div class='bitcoin-balance'>
-              <img src="images/bitcoin2.svg" alt="black bitcoin image">
+              <img src="images/bitcoin2.svg" alt="black_bitcoin_image">
               <h2>Bitcoin</h2>
           </div>
         <!-- <div> -->
         <!-- <div class='ethereum-balance-container'>   -->
           <div class='ethereum-balance'>
-              <img src="images/ethereum2.svg" alt="black ethereum image">
+              <img src="images/ethereum2.svg" alt="black_ethereum_image">
               <h2>Ethereum</h2>
           </div>  
         <!-- </div>   -->
       </div>
       <div class='numerical-balances'>
-        <p class='numerical-bitcoin-balance'>.023231 BTC</p>
-        <p class='numberical-ethereum-balance'>345.34 ETH</p>
+       
+        <p class='numerical-bitcoin-balance'><%= account.btc %> BTC</p>
+        <p class='numerical-ethereum-balance'><%= account.eth %>  ETH</p>
+        
       </div>
     </div>    
   </div>

@@ -16,7 +16,6 @@ function index(req,res){
         // })
         
         
-        
         res.render('trade/index', {
             title: 'Coin Agora',
             users,

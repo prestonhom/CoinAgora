@@ -1,16 +1,20 @@
 const Account = require('../models/account');
 
 module.exports= {
-    index
+    index,
+    
+   
    
 }
 
 function index(req,res){
-    Account.find({}, function(err,users){
+    Account.find({_id: req.user.id}, function(err,account){
+        console.log(account);
         res.render('account/index', {
             title: 'Coin Agora',
-            users,
+            account: account[0],
             user: req.user
         })
     })
 }
+

@@ -3,6 +3,8 @@ var router = express.Router();
 var accountController = require('../controllers/account');
 
 /* GET users listing. */
-router.get('/', accountController.index);
+router.get('/account', accountController.index);
+
+
 
 module.exports = router;

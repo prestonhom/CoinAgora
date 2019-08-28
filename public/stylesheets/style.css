@@ -106,8 +106,7 @@ img.bottom-arrow{
 nav{
   display:flex;
   align-items:center;
-  justify-content: flex-end;
-  /* background-color: black; */
+  justify-content: flex-end;  
   padding:20px;
   background:black;
   
