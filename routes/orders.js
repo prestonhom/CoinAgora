@@ -5,6 +5,8 @@ var orderController = require('../controllers/order');
 
 router.get('/orders', orderController.index);
 router.get('/orders/:id', orderController.show);
+router.get('/orders/delete/:id', orderController.remove)
+// router.get('/orders', orderController.delete)
 
 
 

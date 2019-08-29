@@ -35,8 +35,12 @@ function create(req,res){
     var order = new Order(req.body);
 
     order.save(function(err, savedOrder){
-        if(err) return res.redirect('/trade');
+        if(err) {
+            return res.redirect('/trade')
+        }else {
+            Account.findById()
         return res.redirect(`/orders/${savedOrder._id}`);
+        }
     })
 }
 

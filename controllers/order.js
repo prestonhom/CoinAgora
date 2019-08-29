@@ -3,18 +3,26 @@ const Order = require('../models/order')
 
 module.exports ={
     index,
-    show
+    show,
+    remove
     // bid
     // ask
     // create,
 }
 function show(req,res){
-        Order.findById(req.params.id, function(err, order){
-            res.render('orders/show', {
-                order,
-                user: req.user
-            })
+    Order.findById(req.params.id, function(err, order){
+        res.render('orders/show', {
+            order,
+            user: req.user
         })
+    })
+}
+
+function remove(req,res){
+    Order.findOneAndDelete({_id:req.params.id})
+        .exec(function(err){
+        res.redirect('/orders');
+    })
 }
 function index(req,res){
     Order.find({}, function(err, allOrder){

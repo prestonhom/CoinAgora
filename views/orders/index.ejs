@@ -7,7 +7,7 @@
                 <h1 class='orders-header'> OPEN ORDERS</h1>
                 <thead>
                     <tr>
-                        <th>Remove</th>
+                        
                         <th>Coin</th>
                         <th>Order Type</th>
                         <th>Transaction ID</th>
@@ -16,15 +16,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                        <% allOrder.forEach(function(o){ %>
                     <tr>
-                        <td>remove</td>
+                        
+                    <% allOrder.forEach(function(o){ %>
                         <td> <%= o.coin %></td>
                         <td> <%= o.bid %></td>
                         <td><%= o._id %></td>
                         <td>DATE</td>
                         <td>12</td>
-                        
+                        <td><form action='/orders/delete/<%= o._id %>?_method=DELETE" method="POST'>
+                            <button class='remove-button'>
+                            remove
+                            </button>
+                        </form>
+                        </td>
                     </tr>
                     <% }) %>
                     
