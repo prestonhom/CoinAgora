@@ -4,7 +4,7 @@ var orderController = require('../controllers/order');
 
 
 
-router.get('/orders', orderController.index);
+router.get('/orders/:id', orderController.show);
 
 
 

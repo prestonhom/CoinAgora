@@ -33,10 +33,9 @@ function newTrade(req,res){
 function create(req,res){
     var order = new Order(req.body);
 
-    order.save(function(err){
-        if(err)
-        return res.render('trade/index');
-        res.redirect('/orders');
+    order.save(function(err, savedOrder){
+        if(err) return res.redirect('/trade');
+        return res.redirect(`/orders/${savedOrder._id}`);
     })
 }
 

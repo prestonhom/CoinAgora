@@ -2,16 +2,15 @@ const Account = require('../models/account');
 const Order = require('../models/order')
 
 module.exports ={
-    index
+    show
     // bid
     // ask
     // create,
 }
-function index(req,res){
-        Order.findById(req.user._id, function(err, orders){
-            console.log(orders)
-            res.render('orders/index', {
-                orders,
+function show(req,res){
+        Order.findById(req.params.id, function(err, order){
+            res.render('orders/show', {
+                order,
                 user: req.user
             })
         })

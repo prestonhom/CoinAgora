@@ -1,3 +1,60 @@
 <%- include('../partials/header') %>
-
+<body id='orders-container'>
+    <!-- <img class='coindesk' src="images/coindesk.png" alt="coin-desk"> -->
+    <div id='orders-tables'>
+        <div id='top-row-tables'>
+            <table class='open-orders-table'>
+                <h1 class='orders-header'> OPEN ORDERS</h1>
+                <thead>
+                    <tr>
+                        <th>Remove</th>
+                        <th>Coin</th>
+                        <th>Order Type</th>
+                        <th>Transaction ID</th>
+                        <th>Date Created</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        
+                    <tr>
+                        <td>remove</td>
+                        <td> <%= order.coin %></td>
+                        <td> <%= order.bid %></td>
+                        <td><%= order._id %></td>
+                        <td>DATE</td>
+                        <td>12</td>
+                        
+                    </tr>
+                    
+                    <a class='sell-button'href="/trade">SELL</a></td>
+                   
+                </tbody>
+            </table>
+        </div>
+    
+            
+            <h1 class='orders-header'>FILLED ORDERS</h1>
+            <table class='filled-orders-table'>
+                    <thead>
+                        <tr>
+                            <th>Coin</th>
+                            <th>Order Type</th>
+                            <th>Transaction ID</th>
+                            <th>Date Created</th>
+                            <th>Amount</th>
+                            <th>Date Filled</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <td>BTC</td>
+                        <td>BUY</td>
+                        <td>someID</td>
+                        <td>DATE</td>
+                        <td>12</td>
+                        <td>DATE</td>
+                    </tbody>
+                </table>
+    </div>
+</body>
 <%- include('../partials/footer') %>
