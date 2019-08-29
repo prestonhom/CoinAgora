@@ -16,17 +16,17 @@
                     </tr>
                 </thead>
                 <tbody>
-                        
+                        <% allOrder.forEach(function(o){ %>
                     <tr>
                         <td>remove</td>
-                        <td> <%= order.coin %></td>
-                        <td> <%= order.bid %></td>
-                        <td><%= order._id %></td>
+                        <td> <%= o.coin %></td>
+                        <td> <%= o.bid %></td>
+                        <td><%= o._id %></td>
                         <td>DATE</td>
                         <td>12</td>
                         
                     </tr>
-                    
+                    <% }) %>
                     
                     <a class='sell-button'href="/trade">SELL</a></td>
                    

@@ -5,6 +5,7 @@ module.exports= {
     show,
     new: newTrade,
     create
+    
     // trade
 }
 
@@ -38,6 +39,7 @@ function create(req,res){
         return res.redirect(`/orders/${savedOrder._id}`);
     })
 }
+
 
 // function newTrade(req,res){
 //     Account.findById(req.user._id, function(err, account){
