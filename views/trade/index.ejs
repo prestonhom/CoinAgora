@@ -5,27 +5,27 @@
 
     <div id='trade-forms'>
         <!-- buy -->
-        <form id="bid" action="/orders" method="post">
-            <h1>BID </h1>
+        <form id="bid" action="/orders" method="POST">
+            <h1>BID </h1>   
             <img src="images/bitcoin2.svg" alt="black bitcoin">
+
             <h2>Amount</h2>
-            <input type="number" placeholder="amount">
+            <input name="bid" placeholder="amount">
+            <input type="submit" >
         </form>
         <div id='trade-forms-middle'>
             <h1 class='trade'>TRADE</h1>
             <img class='equalsign'src="images/equalsign.png" width='100px' height='100px'alt="equal sign">
         </div>
         <!-- as -->
-        <form id="ask" action="/orders" method="post">
+        <!-- <form id="ask" action="/orders" method="post">
             <h1>ASK</h1>
             <img src="images/ethereum2.svg" alt="black ethereum" >
             <h2>Amount</h2>
             <input type="number" placeholder="amount" value=<%= account.eth %>>
-            <a href="trade-page-submit-link">
-                <button class='trade-page-submit'> <input type="submit">Submit</button>
-            </a>        
-        </form>
+        </form> -->
     </div>
+            
 </body>
 
 

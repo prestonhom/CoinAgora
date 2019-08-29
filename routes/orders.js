@@ -4,6 +4,12 @@ var orderController = require('../controllers/order');
 
 
 
-router.get('/orders', orderController.index)
+router.get('/orders', orderController.index);
+
+
+
+// router.post('/trade', orderController.bid)
+
+
 
 module.exports = router;

@@ -1,8 +1,10 @@
 const Account = require('../models/account');
+const Order = require('../models/order');
 
 module.exports= {
     show,
-    new: newTrade
+    new: newTrade,
+    create
     // trade
 }
 
@@ -11,9 +13,8 @@ function show (req,res){
     //     res.status(401).send('Please login first');
     // }
     Account.findById(req.user._id, function(err, account){
-        console.log(account);
+        // console.log(account);
         res.render('account/index', {
-            title: 'Coin Agora',
             account,
             user: req.user
         })
@@ -21,13 +22,35 @@ function show (req,res){
 }
 
 function newTrade(req,res){
-    Account.findById(req.user._id, function(err,account){
+    Account.findById(req.user._id, function(err, account){
         res.render('trade/index',{
             account,
             user:req.user
         })
     })
 }
+
+function create(req,res){
+    var order = new Order(req.body);
+
+    order.save(function(err){
+        if(err)
+        return res.render('trade/index');
+        res.redirect('/orders');
+    })
+}
+
+// function newTrade(req,res){
+//     Account.findById(req.user._id, function(err, account){
+//         Order.findOne({account:req.user._id}, function(err,order){
+//             res.render('trade/index', {
+//                 order,
+//                 account,
+//                 user:req.user
+//             })
+//         })
+//     })
+// }
 
 // function trade(req,res){
 //     var order = new Order(req.body);

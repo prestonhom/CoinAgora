@@ -9,16 +9,12 @@ var accountSchema = new Schema({
     googleId:String,
     btc:{
         type:Number,
-        default: 10
+        default: 2
     },
-    eth:{
-        type:Number,
-        default: 100
-    },
-    orders:[{
-        type: Schema.Types.ObjectId,
-        ref: 'Order'
-     }]
+    // eth:{
+    //     type:Number,
+    //     default: 100
+    // },
     },{
     timestamps:true
 })

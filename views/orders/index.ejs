@@ -7,6 +7,7 @@
                 <h1 class='orders-header'> OPEN ORDERS</h1>
                 <thead>
                     <tr>
+                        <th>Remove</th>
                         <th>Coin</th>
                         <th>Order Type</th>
                         <th>Transaction ID</th>
@@ -15,17 +16,18 @@
                     </tr>
                 </thead>
                 <tbody>
-                
+                        <% orders.forEach(function(o){ %>
                     <tr>
-                        <td>remove button</td>
-                        <td>BTC</td>
-                        <td>BUY</td>
-                        <td>someID</td>
+                        <td>remove</td>
+                        <td> <%= o.coin %></td>
+                        <td> <%= o.bid %></td>
+                        <td><%= o._id %></td>
                         <td>DATE</td>
                         <td>12</td>
-                        <td><form action="/trade/<% order._id" %></form> method="POST"></form>
-                            <a class='sell-button'href="/trade">SELL</a></td>
+                        
                     </tr>
+                    <%  }) %>
+                    <a class='sell-button'href="/trade">SELL</a></td>
                    
                 </tbody>
             </table>
