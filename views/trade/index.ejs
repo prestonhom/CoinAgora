@@ -1,10 +1,11 @@
 <%- include('../partials/header') %>
+
 <body id='trade-container'>
     <h1 class='trade-header'>Create Order</h1>
 
     <div id='trade-forms'>
         <!-- buy -->
-        <form id="bid" action="/trade" method="post">
+        <form id="bid" action="/orders" method="post">
             <h1>BID </h1>
             <img src="images/bitcoin2.svg" alt="black bitcoin">
             <h2>Amount</h2>
@@ -14,16 +15,16 @@
             <h1 class='trade'>TRADE</h1>
             <img class='equalsign'src="images/equalsign.png" width='100px' height='100px'alt="equal sign">
         </div>
-        <!-- ask -->
-        <form id="ask" action="/trade" method="post">
+        <!-- as -->
+        <form id="ask" action="/orders" method="post">
             <h1>ASK</h1>
-            <img src="images/ethereum2.svg" alt="black ethereum">
+            <img src="images/ethereum2.svg" alt="black ethereum" >
             <h2>Amount</h2>
-            <input type="number" placeholder="amount">
+            <input type="number" placeholder="amount" value=<%= account.eth %>>
+            <a href="trade-page-submit-link">
+                <button class='trade-page-submit'> <input type="submit">Submit</button>
+            </a>        
         </form>
-        <a href="trade-page-submit-link">
-            <button class='trade-page-submit' type="text">Submit</button>
-        </a>    
     </div>
 </body>
 

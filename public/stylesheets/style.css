@@ -160,6 +160,9 @@ p.left-paragraph{
 h1.my-account{
   margin-left:5em;
 }
+h2.my-account-balance{
+  margin-left:6.5em;
+}
 .accounts{
   border:1px solid black; 
   border-left: 0;

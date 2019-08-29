@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+<body id='trade-container'>
+        <h1 class='trade-header'>Create Order</h1>
+    
+        <div id='trade-forms'>
+            
+            <!-- as -->
+            <form id="ask" action="/orders" method="post">
+                <h1>ASK</h1>
+                <img src="images/ethereum2.svg" alt="black ethereum" >
+                <h2>Amount</h2>
+                <input type="number" placeholder="amount" value=<%= account.eth %>>
+                <a href="trade-page-submit-link">
+                    <button class='trade-page-submit'> <input type="submit">Submit</button>
+                </a>        
+            </form>
+        </div>
+<%- include('../partials/footer') %>

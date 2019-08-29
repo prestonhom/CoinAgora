@@ -1,13 +1,16 @@
 <%- include('../partials/header') %>
 <body id='account-container'>
   <div id='account-main-content'>
-    <h1 class='my-account'>My Account</h1>
+    <h1 class='my-account'>Welcome back, <%= account.name %> !</h1>
+    <h2 class='my-account-balance'>Balances</h2>
+    
     <div class='accounts'>
       <div class='account-balance'>
         <!-- <div class='bitcoin-balance-container'> -->
           <div class='bitcoin-balance'>
               <img src="images/bitcoin2.svg" alt="black_bitcoin_image">
               <h2>Bitcoin</h2>
+              
           </div>
         <!-- <div> -->
         <!-- <div class='ethereum-balance-container'>   -->
@@ -18,12 +21,13 @@
         <!-- </div>   -->
       </div>
       <div class='numerical-balances'>
-       
+        
         <p class='numerical-bitcoin-balance'><%= account.btc %> BTC</p>
         <p class='numerical-ethereum-balance'><%= account.eth %>  ETH</p>
         
       </div>
     </div>    
+    <a href="/trade"><button class='trade-button'> Trade </button> </a>
   </div>
   <h2 class='transaction-history'>Transaction History</h2>
 

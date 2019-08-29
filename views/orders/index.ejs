@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 <body id='orders-container'>
-    <img class='coindesk' src="images/coindesk.png" alt="coin-desk">
+    <!-- <img class='coindesk' src="images/coindesk.png" alt="coin-desk"> -->
     <div id='orders-tables'>
         <div id='top-row-tables'>
             <table class='open-orders-table'>
@@ -15,79 +15,18 @@
                     </tr>
                 </thead>
                 <tbody>
+                
                     <tr>
+                        <td>remove button</td>
                         <td>BTC</td>
                         <td>BUY</td>
                         <td>someID</td>
                         <td>DATE</td>
                         <td>12</td>
-                        <td><a class='sell-button'href="/trade">SELL</a></td>
+                        <td><form action="/trade/<% order._id" %></form> method="POST"></form>
+                            <a class='sell-button'href="/trade">SELL</a></td>
                     </tr>
-                    <!-- data repeats -->
-                    <tr>
-                        <td>BTC</td>
-                        <td>BUY</td>
-                        <td>someID</td>
-                        <td>DATE</td>
-                        <td>12</td>
-                        <td><a class='sell-button' href="/trade">SELL</a></td>
-                    </tr>
-                    <tr>
-                        <td>BTC</td>
-                        <td>BUY</td>
-                        <td>someID</td>
-                        <td>DATE</td>
-                        <td>12</td>
-                        <td><a class='sell-button' href="/trade">SELL</a></td>
-                    </tr>
-                    <tr>
-                        <td>BTC</td>
-                        <td>BUY</td>
-                        <td>someID</td>
-                        <td>DATE</td>
-                        <td>12</td>
-                        <td><a class='sell-button' href="/trade">SELL</a></td>
-                    </tr>
-                    <tr>
-                        <td>BTC</td>
-                        <td>BUY</td>
-                        <td>someID</td>
-                        <td>DATE</td>
-                        <td>12</td>
-                        <td><a class='sell-button' href="/trade">SELL</a></td>
-                    </tr>
-                    <tr>
-                        <td>BTC</td>
-                        <td>BUY</td>
-                        <td>someID</td>
-                        <td>DATE</td>
-                        <td>12</td>
-                        <td><a class='sell-button' href="/trade">SELL</a></td>
-                    </tr>
-                    <tr>
-                        <td>BTC</td>
-                        <td>BUY</td>
-                        <td>someID</td>
-                        <td>DATE</td>
-                        <td>12</td>
-                        <td><a class='sell-button' href="/trade">SELL</a></td>
-                    </tr>
-                    <tr>
-                        <td>BTC</td>
-                        <td>BUY</td>
-                        <td>someID</td>
-                        <td>DATE</td>
-                        <td>12</td>
-                        <td><a class='sell-button' href="/trade">SELL</a></td>
-                    </tr>
-                    <tr>
-                        <td>BTC</td>
-                        <td>BUY</td>
-                        <td>someID</td>
-                        <td>DATE</td>
-                        <td>12</td>
-                        <td><a class='sell-button' href="/trade">SELL</a></td>
-                    </tr>
+                   
                 </tbody>
             </table>
         </div>
