@@ -5,11 +5,11 @@
 This application is a peer-to-peer marketplace for trading cryptocurrency. Buyers and sellers are matched by adding to a queue of **open** orders where the counterparty can select to **fill** either end of a buy or sell of a transaction. Like most marketplaces, an order cannot be filled unless buy and sell have been filled. Buys or sellers can edit and delete their open orders but once the order is filled, it has been filled. Unauthenticated users are only authorized to view listings while users with authentication will be able to have full privileges on the site such as _Logging in, Creating an order, Filling an order_.
 
 
-1.[Landing Page](Desktop/landingpage.png)
-1.[Account Page](Desktop/MyAccount.png)
-1.[Trade Page](Desktop/trade.png)
-1.[Orders Page](Desktop/orders.png)
-1.[Order Edit Page](Desktop/edit.png)
+[Landing Page](/Users/Preston/code/projects/CoinAgora/public/images)
+[Account Page](Desktop/MyAccount.png)
+[Trade Page](Desktop/trade.png)
+[Orders Page](Desktop/orders.png)
+[Order Edit Page](Desktop/edit.png)
 
 
 
