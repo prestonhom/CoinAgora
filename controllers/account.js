@@ -8,7 +8,7 @@ module.exports= {
     
     // trade
 }
-//displays 1 
+//displays one
 function show (req,res){
     Account.findById(req.user._id, function(err, account){
         // console.log(account);
