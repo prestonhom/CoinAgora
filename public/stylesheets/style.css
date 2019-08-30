@@ -241,16 +241,21 @@ input{
   margin-bottom:15px;
 }
 input[type=text]{
-  padding: 15px;
+  padding: 20px;
 }
 input[type=number]{
   padding:15px;
-}
 
+}
+.bid-input{
+  font-size:20px;
+  
+ 
+}
 h1.trade-header{
   margin-left:5em;
 }
-
+/* 
 .trade-page-submit{
   background-color: rgb(0,115,210);
   color:white;
@@ -262,7 +267,23 @@ h1.trade-header{
 }
 .trade-page-submit:hover{
   cursor: pointer;
+} */
+
+.trade-index-submit{
+  background-color: rgb(0,115,210);
+  color:white;
+  font-size:15px;
+  border-radius:15px;
+  padding:10px 50px;
 }
+.trade-index-submit:hover{
+  background-color: white;
+  color:rgb(0,115,210);
+  cursor: pointer;
+
+
+}
+
 
 /************ TRADE PAGE ENDS *************/
 
@@ -314,6 +335,10 @@ table td{
   margin-top:100px;
   
 }
+.remove-button{
+  font-size:20px;
+  border-radius:5px;
+}
 .remove-button:hover{
   cursor: pointer;
   background-color:red;
@@ -341,3 +366,5 @@ table td{
   border-radius:15px;
   padding:10px 50px;
 }
+
+
