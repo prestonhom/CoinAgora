@@ -303,6 +303,10 @@ table td{
 .transaction-id-link{
   color:blue;
 }
+
+.orders-a{
+  color:blue;
+}
 .orders-table{
   font-family:Helvetica;
   

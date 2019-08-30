@@ -10,7 +10,6 @@
                         <th>Coin</th>
                         <th>Order Type</th>
                         <th>Transaction ID</th>
-                        <th>Date Created</th>
                         <th>Amount</th>
                     </tr>
                 </thead>
@@ -18,12 +17,12 @@
                     <tr>
                         
                     <% allOrder.forEach(function(o){ %>
-                        <td><form action="/orders/<%= o._id %>" method='POST'></form></td>
-                        <td> <%= o.coin %></td>
+                        <form action="/orders/<%= o._id %>" method='POST'></form>
+                        <td> <%= o.coin.toUpperCase() %></td>
+                        <td> <%= o.orderType.toUpperCase(0) %></td>
+                        <td><a class='transaction-id-link' href="/orders/<%= o._id %>/edit"><%= o._id %></a></td>
                         <td> <%= o.bid %></td>
-                        <td><a class='transaction-id-link' href="/orders/<%= o._id %>"><%= o._id %></a></td>
-                        <td>DATE</td>
-                        <td>12</td>
+                        
                         <td><% if (user) { %>
                             <form action='/orders/delete/<%= o._id %>?_method=DELETE" method="POST'>
                             <button class='remove-button'>remove </button>
@@ -34,7 +33,7 @@
                     </tr>
                     <% }) %>
                     
-                    <a class='sell-button'href="/trade">SELL</a></td>
+                    <!-- <a class='sell-button'href="/trade">SELL</a></td> -->
                    
                 </tbody>
             </table>
@@ -48,8 +47,8 @@
                             <th>Coin</th>
                             <th>Order Type</th>
                             <th>Transaction ID</th>
-                            <th>Date Created</th>
                             <th>Amount</th>
+                            <th>Date Created</th>
                             <th>Date Filled</th>
                         </tr>
                     </thead>
