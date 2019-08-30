@@ -38,6 +38,7 @@ var orderSchema = new Schema({
     },
     coin:{
         type:String,
+        enum:['btc','eth'],
         default: 'btc'
     },
     account:{

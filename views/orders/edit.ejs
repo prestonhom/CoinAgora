@@ -1,0 +1,63 @@
+<%- include('../partials/header') %>
+<table class='open-orders-table' >
+        <thead>
+                <tr>
+                    
+                    <th>Coin</th>
+                    <th>Order Type</th>
+                    <th>Transaction ID</th>
+                    <th>Date Created</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+        <tbody>
+            <tr>
+                <td>remove</td>
+                <td> <%= orders.coin %></td>
+                <td> <%= orders.bid %></td>
+                <td><%= orders._id %></td>
+                <td>DATE</td>
+                <td>12</td>
+                
+            </tr>
+        
+            <a class='sell-button'href="/trade">SELL</a></td>
+       
+        </tbody>
+        
+</table>
+<form action="/orders/<%= orders._id %>?_method=PUT" method="POST">
+    <table class='open-orders-table' >
+            <thead>
+                    <tr>
+                        
+                        <th>Coin</th>
+                        <th>Order Type</th>
+                        <th>Transaction ID</th>
+                        <th>Date Created</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+            <tbody>
+                <tr>
+                    <td>remove</td>
+                    <td> <input type="text" name='coin' placeholder="coin"></td>
+                    <td> <input type="text" name='bid' placeholder="bid"></td>
+                    <td> <%= orders._id %></td>
+                    <td>DATE</td>
+                    <td>12</td>
+                    
+                    <input type="submit"> 
+                
+                </tr>
+            
+           
+            </tbody>
+            
+    </table>
+
+
+</form>
+
+
+<%- include('../partials/footer') %>

@@ -4,10 +4,10 @@ const Order = require('../models/order')
 module.exports ={
     index,
     show,
-    remove
-    // bid
-    // ask
-    // create,
+    remove,
+    update,
+    edit,
+    
 }
 function show(req,res){
     Order.findById(req.params.id, function(err, order){
@@ -33,6 +33,25 @@ function index(req,res){
     })
 }
 
+function update(req,res){
+    Order.findByIdAndUpdate(req.params.id, req.body, function(err){
+            if(err){
+                res.render('orders/edit')
+            }else{
+                res.redirect('/orders')
+        }
+    })
+}
+
+function edit(req,res){
+    console.log(req.params.id);
+    Order.findById({_id:req.params.id},function(err,orders){
+        res.render('orders/edit', {
+            orders,
+            user:req.user
+        })
+    })
+}
 
 // function show(req,res){
 //     Order.findById({},function(err,account){

@@ -276,6 +276,9 @@ table td{
   font-size:20px;
   padding:10px;
 }
+.transaction-id-link{
+  color:blue;
+}
 .orders-table{
   font-family:Helvetica;
   
