@@ -39,7 +39,10 @@ var orderSchema = new Schema({
     coin:{
         type:String,
         enum:['btc','eth'],
-        default: 'btc'
+    },
+    orderType:{
+        type:String,
+        enum:['buy','sell']
     },
     account:{
         type: Schema.Types.ObjectId,

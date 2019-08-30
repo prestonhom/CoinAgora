@@ -9,12 +9,12 @@ var accountSchema = new Schema({
     googleId:String,
     btc:{
         type:Number,
-        default: 2
+        default: 100
     },
-    // eth:{
-    //     type:Number,
-    //     default: 100
-    // },
+    eth:{
+        type:Number,
+        default: 100
+    },
     },{
     timestamps:true
 })

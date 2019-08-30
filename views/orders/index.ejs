@@ -25,12 +25,11 @@
                         <td><a class='transaction-id-link' href="/orders/<%= o._id %>"><%= o._id %></a></td>
                         <td>DATE</td>
                         <td>12</td>
-                        <td><form action='/orders/delete/<%= o._id %>?_method=DELETE" method="POST'>
-                            
-                            <button class='remove-button'>
-                            remove
-                            </button>
-                            
+                        <td><% if (user) { %>
+                            <form action='/orders/delete/<%= o._id %>?_method=DELETE" method="POST'>
+                            <button class='remove-button'>remove </button>
+                            <% }else { %>
+                            <% } %>   
                         </form>
                         </td>
                     </tr>

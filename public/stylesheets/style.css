@@ -1,5 +1,7 @@
+/********** INDEX PAGE BEGINS **********/
+
 #index-container {
-  /* position: absolute; */
+  
 width: 100%;
 height: 100%;
 left: 0px;
@@ -13,7 +15,6 @@ margin:0px;
   margin:0px;
   background-color:white;
 }
-
 
 .coin-agora-welcome{
   font-family: Montserrat;
@@ -78,7 +79,7 @@ button.sign-up{
 
 .ethereum-image{
   margin-right:40px;
-  /* margin-left:20px; */
+  
 }
 .homepage-buttons a{  
   display: flex;
@@ -139,10 +140,9 @@ img.bottom-arrow{
   height:100px;
 }
 .homepage-buttons{
-  /* display:flex; */
+  
   padding: 3em;
-  /* align-items:center;
-  flex-direction: column; */
+  
   
 }
 
@@ -150,8 +150,9 @@ img.bottom-arrow{
 p.left-paragraph{
   margin-left:50px;
 }
+/* ************ INDEX PAGE ENDS  *********** */
 
-/* account page styles */
+/************* ACCOUNT PAGE BEGINS ****************/
 #account-container{
   margin:0px;
   font-family:Montserrat;
@@ -212,8 +213,10 @@ h2.my-account-balance{
 }
 
 
-/* end of account page */
-/* trade page */
+/********* ACCOUNT PAGE ENDS *********/
+
+
+/*********** TRADE PAGE BEGINS *********/
 #trade-container{
   margin:0px;
   background-color:white;
@@ -261,9 +264,9 @@ h1.trade-header{
   cursor: pointer;
 }
 
-/* end of trade page */
+/************ TRADE PAGE ENDS *************/
 
-/* orders page */
+/********* ORDERS PAGE BEGINS *************/
 #orders-container{
   margin: 0px;
 }
@@ -311,3 +314,7 @@ table td{
   margin-top:100px;
   
 }
+
+
+
+/****** ORDER PAGE ENDS  ********/

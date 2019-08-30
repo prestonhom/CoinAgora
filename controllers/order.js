@@ -6,9 +6,10 @@ module.exports ={
     show,
     remove,
     update,
-    edit,
+    edit
     
 }
+//displays all the orders after it has been appended from ceating one in 
 function show(req,res){
     Order.findById(req.params.id, function(err, order){
         res.render('orders/show', {
@@ -17,13 +18,14 @@ function show(req,res){
         })
     })
 }
-
+// uses method override to find an instance that matches the URL/ req.params.id and deletes it
 function remove(req,res){
     Order.findOneAndDelete({_id:req.params.id})
         .exec(function(err){
         res.redirect('/orders');
     })
 }
+//controller that lists all orders
 function index(req,res){
     Order.find({}, function(err, allOrder){
         res.render('orders/index', {
@@ -32,7 +34,7 @@ function index(req,res){
         })
     })
 }
-
+// updates orders
 function update(req,res){
     Order.findByIdAndUpdate(req.params.id, req.body, function(err){
             if(err){
@@ -42,7 +44,7 @@ function update(req,res){
         }
     })
 }
-
+//brings users to show a single order for editing
 function edit(req,res){
     console.log(req.params.id);
     Order.findById({_id:req.params.id},function(err,orders){
@@ -53,23 +55,3 @@ function edit(req,res){
     })
 }
 
-// function show(req,res){
-//     Order.findById({},function(err,account){
-//         res.render('trade/index')
-//     })
-// }
-
-// function create(req,res){
-//     Account.findById(req.order._id, function(err, order ){
-//         res.render('trade/index', {
-
-//         })
-//     })
-// }
-
-// function bid(req,res){
-//     Order.findById(req.user._id, function(err,coin){
-//         console.log(bid)
-//         res.redirect('/trade')
-//         })
-// }

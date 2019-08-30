@@ -1,6 +1,7 @@
 <%- include('../partials/header') %>
 <body id='orders-container'>
     <!-- <img class='coindesk' src="images/coindesk.png" alt="coin-desk"> -->
+    <% if (user) { %>
     <div id='orders-tables'>
         <div id='top-row-tables'>
             <table class='open-orders-table'>
@@ -57,5 +58,11 @@
                     </tbody>
                 </table>
     </div>
+    <% }else { %>
+        <h3>Please
+        <a href="/auth/google">Login</a>
+        First
+        </h3>
+    <% } %>
 </body>
 <%- include('../partials/footer') %>
