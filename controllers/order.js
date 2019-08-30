@@ -20,7 +20,7 @@ function show(req,res){
 }
 // uses method override to find an instance that matches the URL/ req.params.id and deletes it
 function remove(req,res){
-    Order.findOneAndDelete({_id:req.params.id})
+    Order.findOneAndDelete(req.params.id)
         .exec(function(err){
         res.redirect('/orders');
     })
@@ -46,9 +46,8 @@ function update(req,res){
 }
 //brings users to show a single order for editing
 function edit(req,res){
-    console.log(req.params.id);
-    Order.findById({_id:req.params.id},function(err,orders){
-        res.render('orders/edit', {
+    Order.findById(req.params.id,function(err,orders){
+        res.render(`orders/edit`, {
             orders,
             user:req.user
         })

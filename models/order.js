@@ -42,13 +42,15 @@ var orderSchema = new Schema({
     },
     orderType:{
         type:String,
-        enum:['buy','sell']
+        enum:['buy','sell'],
+        default: 'buy'
     },
     account:{
         type: Schema.Types.ObjectId,
         ref: 'Account'
-    }
-    
+    },
+    },{
+    timestamps:true
 })
 
 module.exports = mongoose.model('Order', orderSchema)

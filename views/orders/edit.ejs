@@ -1,32 +1,7 @@
 <%- include('../partials/header') %>
-<body id='orders-container'>
-<table class='open-orders-table' >
-        <thead>
-                <tr>
-                    
-                    <th>Coin</th>
-                    <th>Order Type</th>
-                    <th>Transaction ID</th>
-                    <th>Date Created</th>
-                    <th>Amount</th>
-                </tr>
-            </thead>
-        <tbody>
-            <tr>
-                <td> <%= orders.coin %></td>
-                <td> <%= orders.bid %></td>
-                <td><%= orders._id %></td>
-                <td>DATE</td>
-                <td>12</td>
-                
-            </tr>
-        
-            <a class='sell-button'href="/trade">SELL</a></td>
-       
-        </tbody>
-        
-</table>
-<form action="/orders/<%= orders._id %>?_method=PUT" method="POST">
+<body id='edit-container'>
+
+<h1 class ='update-order'> UPDATING ORDER ID: <%= orders._id %> </h1>
     <table class='open-orders-table' >
             <thead>
                     <tr>
@@ -34,29 +9,42 @@
                         <th>Coin</th>
                         <th>Order Type</th>
                         <th>Transaction ID</th>
-                        <th>Date Created</th>
                         <th>Amount</th>
                     </tr>
                 </thead>
             <tbody>
                 <tr>
-                    <td>remove</td>
-                    <td> <input type="text" name='coin' placeholder="coin"></td>
-                    <td> <input type="text" name='bid' placeholder="bid"></td>
-                    <td> <%= orders._id %></td>
-                    <td>DATE</td>
-                    <td>12</td>
+                    <td> <%= orders.coin %></td>
+                    <td><%= orders.orderType %> </td>
+                    <td><%= orders._id %></td>
+                    <td> <%= orders.bid %></td>
                     
-                    <input type="submit"> 
-                
                 </tr>
             
-           
             </tbody>
             
     </table>
-
-
+    <form action="/orders/<%= orders._id %>?_method=PUT" method="POST">
+        <table class='open-orders-table' >
+                <thead>
+                        <tr>
+                            
+                            <th>Coin</th>
+                            <th>Order Type</th>
+                            
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                <tbody>
+                    <tr>
+                        <td> <input type="text" name='coin' placeholder="coin"></td>
+                        <td> <input type="text" name='orderType' placeholder="Buy or Sell"></td>
+                        <td> <input type="number" name='amount' placeholder='amount'></td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+            <input class ='edit-page-submit' type="submit"> 
 </form>
 
 </body>
